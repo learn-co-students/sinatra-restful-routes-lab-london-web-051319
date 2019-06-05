@@ -1,0 +1,12 @@
+<h1>All Recipes: </h1>
+
+<% if @recipes.count > 0 %>
+	<% @recipes.each do |a| %>
+		<p>name: <%= a.name%></p>
+		<p>ingredients: <%= a.ingredients %></p>
+		<p>cook_time: <%= a.cook_time %></p>
+		<p><a href= '/recipes/<%= a.id %>'>Link</a></p>
+	<% end %> 
+	<% else %>
+	<p>No recipes</p>
+<% end %>
