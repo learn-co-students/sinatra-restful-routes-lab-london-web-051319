@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+
+      <h1>Delete Recipe: <%= @recipe.name %></h1>
+      <p>If you would like to delete this recipe, please confirm by clicking below:</p>
+
+      <form method="post" action="/recipes/<%= @recipe.id %>/delete">
+        <input type="submit" value="Delete" />
+        <input type="hidden" id="hidden" name="_method" value="delete"/>
+      </form>
+
+      <br>
+      <a href="/recipes">Go back</a>
+    </body>
+  </html>
